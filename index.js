@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const mongoString = process.env.DATABASE_URL || "mongodb://localhost:27017/routinedb";
 
+
 mongoose.connect(mongoString);
 const database = mongoose.connection;
 

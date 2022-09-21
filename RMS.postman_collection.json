@@ -1,0 +1,457 @@
+{
+	"info": {
+		"_postman_id": "d56d3e28-8297-41e1-aa39-059fe31186f4",
+		"name": "RMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18474896"
+	},
+	"item": [
+		{
+			"name": "Subjects",
+			"item": [
+				{
+					"name": "Create Subject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzI3MzdkOTI1ZjhhM2QxMWY4OTU2NTAiLCJpYXQiOjE2NjM1MTQ3NjUsImV4cCI6MTY2Mzc3Mzk2NX0.hXSasoUIl2oH919tomGzk7phtxML3FDjtVETr2hh5ho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Physics\",\n  \"creditHour\": 4,\n  \"lecture\": 4,\n  \"practical\": 3,\n  \"alias\": \"PHY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/subjects/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subjects",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Subject",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzI3MzdkOTI1ZjhhM2QxMWY4OTU2NTAiLCJpYXQiOjE2NjM1MTQ3NjUsImV4cCI6MTY2Mzc3Mzk2NX0.hXSasoUIl2oH919tomGzk7phtxML3FDjtVETr2hh5ho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"MathII\",\n  \"alias\": \"MTHII\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/subjects/update/63273fb227821ea3b7a880a4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subjects",
+								"update",
+								"63273fb227821ea3b7a880a4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Subjects",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzI3MzdkOTI1ZjhhM2QxMWY4OTU2NTAiLCJpYXQiOjE2NjM1MTQ3NjUsImV4cCI6MTY2Mzc3Mzk2NX0.hXSasoUIl2oH919tomGzk7phtxML3FDjtVETr2hh5ho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Physics\",\n  \"creditHour\": 4,\n  \"lecture\": 4,\n  \"practical\": 3,\n  \"alias\": \"PHY\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/subjects/getAll",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"subjects",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fname\": \"test\",\n    \"lname\": \"user\",\n    \"email\": \"test@example.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Routines",
+			"item": []
+		},
+		{
+			"name": "Departments",
+			"item": [
+				{
+					"name": "Add Routine To Department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzI3MzdkOTI1ZjhhM2QxMWY4OTU2NTAiLCJpYXQiOjE2NjM1MTQ3NjUsImV4cCI6MTY2Mzc3Mzk2NX0.hXSasoUIl2oH919tomGzk7phtxML3FDjtVETr2hh5ho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"routineID\": \"routineid\",\n    \"semester\": \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/departments/addRoutine/<deptID>",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"departments",
+								"addRoutine",
+								"<deptID>"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Conflict",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzI3MzdkOTI1ZjhhM2QxMWY4OTU2NTAiLCJpYXQiOjE2NjM1MTQ3NjUsImV4cCI6MTY2Mzc3Mzk2NX0.hXSasoUIl2oH919tomGzk7phtxML3FDjtVETr2hh5ho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"departmentName\": \"IT\",\n  \"semester\": \"1\",\n  \"subjectAlias\": \"PHY\",\n  \"teacherAlias\": \"DHX\",\n  \"weekDayIdx\": \"1\",\n  \"timeSlotIdx\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/departments/checkConflict",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"departments",
+								"checkConflict"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzI3MzdkOTI1ZjhhM2QxMWY4OTU2NTAiLCJpYXQiOjE2NjM1MTQ3NjUsImV4cCI6MTY2Mzc3Mzk2NX0.hXSasoUIl2oH919tomGzk7phtxML3FDjtVETr2hh5ho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"IT\",\n    \"subjects\": [\n        {\n            \"subjectID\": \"id\",\n            \"teacherID\": \"id\",\n            \"semester\": \"1\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/departments/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"departments",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teachers",
+			"item": [
+				{
+					"name": "Update Teacher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzI3MzdkOTI1ZjhhM2QxMWY4OTU2NTAiLCJpYXQiOjE2NjM1MTQ3NjUsImV4cCI6MTY2Mzc3Mzk2NX0.hXSasoUIl2oH919tomGzk7phtxML3FDjtVETr2hh5ho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jaden Dode\",\n    \"initial\": \"JD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/teachers/update/632a9592b89d41289232f6a1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teachers",
+								"update",
+								"632a9592b89d41289232f6a1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Teacher",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzI3MzdkOTI1ZjhhM2QxMWY4OTU2NTAiLCJpYXQiOjE2NjM1MTQ3NjUsImV4cCI6MTY2Mzc3Mzk2NX0.hXSasoUIl2oH919tomGzk7phtxML3FDjtVETr2hh5ho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"John Dode\",\n    \"initial\": \"JD\",\n    \"workload\": 2,\n    \"type\": \"full-time\",\n    \"startTime\": \"10AM\",\n    \"endTime\": \"4PM\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/teachers/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teachers",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Teachers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzI3MzdkOTI1ZjhhM2QxMWY4OTU2NTAiLCJpYXQiOjE2NjM1MTQ3NjUsImV4cCI6MTY2Mzc3Mzk2NX0.hXSasoUIl2oH919tomGzk7phtxML3FDjtVETr2hh5ho",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"IT\",\n    \"subjects\": [\n        {\n            \"subjectID\": \"id\",\n            \"teacherID\": \"id\",\n            \"semester\": \"1\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/teachers/getAll",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"teachers",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000/api",
+			"type": "string"
+		}
+	]
+}

@@ -24,7 +24,7 @@ const teacherService = {
 
       if (teacherInDB) throw new Error("teacher already exists");
 
-      const newTeacher = new teacherModel({ ...data });
+      const newTeacher = new TeacherModel({ ...data });
       await newTeacher.save();
 
       return newTeacher;

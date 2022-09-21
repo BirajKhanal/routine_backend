@@ -5,7 +5,6 @@ const { subjectRouter } = require("./subject.routes");
 const { departmentRouter } = require("./department.routes");
 const { roomRouter } = require("./room.routes");
 const { userRouter } = require("./user.routes");
-const { semesterRouter } = require("./semester.routes");
 const { routineRouter } = require("./routine.routes");
 
 const verify = require("../middleware/auth.middleware");
@@ -15,7 +14,6 @@ router.use("/subjects", verify, subjectRouter);
 router.use("/departments", verify, departmentRouter);
 router.use("/rooms", verify, roomRouter);
 router.use("/users", userRouter);
-router.use("/semesters", verify, semesterRouter);
 router.use("/routines", verify, routineRouter);
 
 module.exports = router;

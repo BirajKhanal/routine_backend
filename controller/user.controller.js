@@ -23,8 +23,7 @@ const userRegister = async (req, res) => {
 
     //   IF ERROR EXISTS THEN SEND BACK THE ERROR
     if (error) {
-      res.status(400).send(error.details[0].message);
-      return;
+      return res.status(400).send(error.details[0].message);
     } else {
       //CHECKING IF USER EMAIL ALREADY EXISTS
       const emailExist = await User.findOne({ email: req.body.email });
@@ -37,7 +36,6 @@ const userRegister = async (req, res) => {
       //HASHING THE PASSWORD
 
       const salt = await bcrypt.genSalt(10);
-      console.log(req.body.password);
       const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
       //ON PROCESS OF ADDING NEW USER

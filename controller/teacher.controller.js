@@ -5,7 +5,7 @@ const teacherAddSchema = Joi.object({
   name: Joi.string().required(),
   initial: Joi.string().required(),
   workload: Joi.number().required(),
-  type: Joi.number().required(),
+  type: Joi.string().required(),
   startTime: Joi.string().required(),
   endTime: Joi.string().required(),
 });
@@ -14,7 +14,7 @@ const teacherUpdateSchema = Joi.object({
   name: Joi.string().optional(),
   initial: Joi.string().optional(),
   workload: Joi.number().optional(),
-  type: Joi.number().optional(),
+  type: Joi.string().optional(),
   startTime: Joi.string().optional(),
   endTime: Joi.string().optional(),
 });

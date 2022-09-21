@@ -12,6 +12,8 @@ const teacherSchema = new mongoose.Schema({
   type: {
     required: true,
     type: String,
+    enum: ["full-time", "part-time"],
+    default: "full-time",
   },
   startTime: {
     type: String,
